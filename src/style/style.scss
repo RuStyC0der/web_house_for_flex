@@ -1,0 +1,102 @@
+
+$wall_width: 500px;
+$wall_height: 400px;
+
+.house * {
+  display: flex;
+}
+
+.house{
+  .house__roof{
+    justify-content: center;
+    height:0;
+    width: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 350px solid red;
+    .roof__snow{
+      height:0;
+      width: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 35px solid snow;
+    }
+
+
+  }
+    .house__wall{
+      background-color: greenyellow;
+      border: 1px solid black;
+      width: $wall_width;
+      height: $wall_height;
+      top:350px;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .wall__window_left{
+        justify-content: center;
+        order: 1;
+        border: 1px solid black;
+        width: 20%;
+        height: 50%;
+        background: yellow;
+      }
+      .wall__window_right{
+        order: 3;
+        border: 1px solid black;
+        width: 20%;
+        height: 50%;
+        background: yellow;
+      }
+
+      .wall__door{
+        order: 2;
+        align-self: flex-end;
+        width: 20%;
+        height: 40%;
+        background: red;
+        justify-content: flex-end;
+        align-items: center;
+        .door__lock{
+          position: relative;
+          right: 10%;
+          background: gray;
+          width: 20%;
+          height: 30%;
+          justify-content: space-around;
+          align-items: center;
+
+          flex-direction: column;
+          .lock__handle{
+            position: relative;
+            right: 30%;
+            width: 100%;
+            height: 10%;
+            background: black;
+          }
+          .lock__lock{
+            position: relative;
+            width: 30%;
+            height: 20%;
+            background: black;
+          }
+        }
+      }
+
+      .window__frame_horizontal{
+        // position: relative;
+        align-self: center;
+        width: 100%;
+        height: 2%;
+        background: black;
+      }
+      .window__frame_vertical{
+        right: 50%;
+        position: relative;
+        width: 2%;
+        height: 100%;
+        background: black;
+      }
+  }
+}
